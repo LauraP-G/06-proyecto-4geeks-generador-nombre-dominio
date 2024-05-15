@@ -1,1 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: rgb(240, 230, 234);
+  font-family: sans-serif;
+}
+
+.main {
+  background-color: transparent;
+  border: 1px solid #e7adaa;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  color: rgb(112, 110, 111);
+  box-shadow: 0 0 20px 15px #c5c5c5;
+}
