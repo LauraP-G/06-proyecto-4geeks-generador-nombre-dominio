@@ -5,36 +5,19 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-//Arrays para formar combinaciones de nombres de domino
-let pronoun = ["you", "he", "the", "me", "our"];
-let adj = ["happy", "sad", "big", "small", "hot"];
-let noum = ["apple", "dog", "house", "bird", "cat"];
-let extension = [".com", ".net", ".org", ".info", ".es"];
-
-//Función que realiza todos las combinaciones posibles de nombre de dominio
-const generateAllDomainCombinations = () => {
-  for (let pronombre of pronoun) {
-    for (let adjetivo of adj) {
-      for (let nombre of noum) {
-        for (let extensiones of extension) {
-          console.log(pronombre + adjetivo + nombre + extensiones);
-        }
-      }
-    }
-  }
-};
-
-//Llama a la función que genera todos los nombres de dominio, se muestran en consola
-generateAllDomainCombinations();
-
-//Genera bucle para mostrar todas las opciones disponibles de dominios, se muestra en el HTML
+//Genera bucle para mostrar todas las opciones disponibles de dominios, se muestra en el HTML, esta función se llama automaticamente al cargar la página
 window.onload = function() {
+  let pronoun = ["you", "he", "the", "me", "our"];
+  let adj = ["happy", "sad", "big", "small", "hot"];
+  let noum = ["apple", "dog", "house", "bird", "cat"];
+  let extension = [".com", ".net", ".org", ".info", ".es"];
   let dominio = "";
   for (let pronombre of pronoun) {
     for (let adjetivo of adj) {
       for (let nombre of noum) {
         for (let extensiones of extension) {
-          dominio += pronombre + adjetivo + nombre + extensiones + "<br>";
+          console.log(pronombre + adjetivo + nombre + extensiones); // muestra en consola todos los dominios posibles
+          dominio += pronombre + adjetivo + nombre + extensiones + "<br>"; // muestra en pantalla todos los dominios posibles
         }
       }
     }
